@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Age Calculator";
+}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">🎂 Age Calculator</h3>
+                </div>
+
+                <div class="card-body p-4">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">
+                            Select Your Date of Birth
+                        </label>
+
+                        <input type="date"
+                               id="dob"
+                               class="form-control form-control-lg">
+                    </div>
+
+                    <div class="d-grid">
+                        <button class="btn btn-success btn-lg"
+                                onclick="calculateAge()">
+                            Calculate Age
+                        </button>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        <h4 id="result" class="text-primary"></h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    function calculateAge() {
+
+        let dob = document.getElementById("dob").value;
+
+        if (!dob) {
+            alert("Please select your date of birth");
+            return;
+        }
+
+        let birthDate = new Date(dob);
+        let today = new Date();
+
+        let age = today.getFullYear() - birthDate.getFullYear();
+
+        let month = today.getMonth() - birthDate.getMonth();
+
+        if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+
+        document.getElementById("result").innerText =
+            "Your Age is " + age + " years";
+
+    }
+
+</script>
