@@ -1,6 +1,6 @@
 # Tool Kit
 
-Tool Kit is a browser-based application built using ASP.NET (.NET 6) that provides a collection of useful tools and mini applications in one place. 
+Tool Kit is a browser-based application built using ASP.NET that provides a collection of useful tools and mini applications in one place. 
 
 The project acts as a utility hub where users can access different utilities such as calculators, generators, and small interactive tools through a simple web interface.
 
