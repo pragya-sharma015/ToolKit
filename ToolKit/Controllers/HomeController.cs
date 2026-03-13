@@ -38,6 +38,27 @@ namespace ToolKit.Controllers
         
             return View();
         }
+
+        public IActionResult RandomName()
+        {
+
+            return View();
+        }
+
+        public IActionResult NumberGuessing()
+        {
+            return View();
+        }
+
+        public IActionResult ToDoList()
+        {
+            return View();
+        }
+
+        public IActionResult WeatherChecker()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
